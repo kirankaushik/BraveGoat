@@ -1,0 +1,16 @@
+<apex:page standardController="Opportunity" extensions="OpportunityPageControllerExtension">
+    
+    <apex:form >
+    	<apex:pageBlock title="Oppty Page" mode="detail">
+        	<apex:pageBlockSection collapsible="false" title="Key Info" columns="2">
+            	<apex:inputField value="{!opportunity.Name}"/>
+                <apex:outputText value="{!accountName}"/>
+                <apex:inputField value="{!opportunity.StageName}"/>
+                <apex:inputField value="{!opportunity.CloseDate}"/>
+                <apex:inputField value="{!opportunity.Amount}"/>
+            </apex:pageBlockSection>
+            <apex:commandButton value="Save" action="{!save}"/>
+            <apex:commandButton value="Cancel" action="{!cancel}"/>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

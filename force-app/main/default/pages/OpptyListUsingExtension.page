@@ -1,0 +1,15 @@
+<apex:page standardcontroller="Opportunity" recordSetVar="lstOpportunities" extensions="OpptyListExtensionController">
+    
+    <apex:form >
+    	<apex:pageBlock title="Oppty table" mode="detail" id="page_block">
+        	<apex:pageBlockTable value="{!lstOpportunities}" var="oppty">
+                <apex:column value="{!oppty.Name}"/>
+                <apex:column value="{!oppty.Account.Name}"/>
+                <apex:column value="{!oppty.CloseDate}"/>
+                <apex:column value="{!oppty.StageName}"/>
+                <apex:column value="{!oppty.Amount}"/>
+            </apex:pageBlockTable>
+            
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

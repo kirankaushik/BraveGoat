@@ -1,0 +1,16 @@
+<apex:page standardcontroller="Opportunity">
+    <apex:messages />
+    <apex:form >
+    	<apex:pageBlock title="New Opportunity" mode="edit">
+        	<apex:pageBlockSection title="Important Information" collapsible="false" columns="2">
+                <apex:inputField label="Oppty Name" value="{!opportunity.Name}"/>
+                <apex:inputField value="{!opportunity.AccountId}"/>
+                <apex:inputField value="{!opportunity.CloseDate}"/>
+                <apex:inputField value="{!opportunity.Amount}"/>
+                <apex:inputField value="{!opportunity.StageName}"/>
+            </apex:pageBlockSection>
+            <apex:commandButton value="Save" action="{!save}"/>
+            <apex:commandButton value="Cancel" action="{!cancel}"/>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,8 @@
+<apex:page StandardController="Account" extensions="RedirectTestController">
+    
+    <apex:form >
+        <apex:inputText value="{!account.Name}"/>
+    	<apex:commandButton value="Click to test redirect scenario" action="{!Redirect}"/>
+    </apex:form>
+    
+</apex:page>

@@ -1,0 +1,16 @@
+<apex:page standardcontroller="Account" recordSetVar="accounts">
+    
+    <apex:form >
+    	<apex:pageBlock title="Account table" mode="detail">
+        	<apex:pageblocktable value="{!accounts}" var="acct">
+                <apex:column value="{!acct.Name}"/>
+               <!-- <apex:column value="{!acct.Rating}"/>
+                <apex:column value="{!acct.NumberOfEmployees}"/>
+                <apex:column value="{!acct.Owner.Name}"/>-->
+            </apex:pageblocktable>
+        
+        <apex:commandLink value="Previous" action="{!Previous}"/>
+        <apex:commandLink value="Next" action="{!Next}"/>
+            </apex:pageBlock>
+    </apex:form>
+</apex:page>
